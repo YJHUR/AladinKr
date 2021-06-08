@@ -109,7 +109,8 @@ class Worker(Thread):  # {{{
                 if '19세' in raw.decode('utf-8'):
                     self.log.warning('19세 연령제한 페이지입니다.')
                     home = os.path.expanduser('~')
-                    file = os.path.join(home, self.aladin+'.html')
+                    desktop = os.path.join(home, 'Desktop')
+                    file = os.path.join(desktop, self.aladin+'.html')
                     try:
                         raw = open(file).read()
                     except:
